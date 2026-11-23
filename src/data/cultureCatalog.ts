@@ -50,7 +50,7 @@ export const CULTURAL_DOSSIERS: CulturalDossier[] = [
     title: 'La biblioteca infinita: de Borges al nuevo gótico rioplatense',
     deck: 'Un recorrido por las librerías de la calle Corrientes y los relatos que redefinieron la imaginación en lengua española.',
     category: 'libros',
-    image: '/src/assets/images/libros_ateneo_editorial_1795401974357.jpg',
+    image: 'src/assets/images/libros_ateneo_editorial_1795401974357.jpg',
     imageAlt: 'Pila de ediciones clásicas de literatura argentina bajo una lámpara de bronce en una librería porteña',
     caption: 'Fig. 2 — Mesa de lectura con primeras ediciones y narrativa argentina contemporánea.',
     featuredItemId: 'lib-ficciones',
@@ -62,7 +62,7 @@ export const CULTURAL_DOSSIERS: CulturalDossier[] = [
     title: 'Luces sobre el adoquín: poética y pulso del cine argentino',
     deck: 'Del suspenso urbano de Bielinsky a las atmósferas sensoriales de Lucrecia Martel en el norte argentino.',
     category: 'cine',
-    image: '/src/assets/images/cine_nuevo_argentino_1795401973546.jpg',
+    image: 'src/assets/images/cine_nuevo_argentino_1795401973546.jpg',
     imageAlt: 'Calle adoquinada nocturna en Buenos Aires con reflejos de lluvia frente a la marquesina del Cine Gaumont',
     caption: 'Fig. 3 — Marquesina del Cine Gaumont frente a la Plaza del Congreso, refugio del cine nacional.',
     featuredItemId: 'cin-la-cienaga',
@@ -74,7 +74,7 @@ export const CULTURAL_DOSSIERS: CulturalDossier[] = [
     title: 'Una silla y un foco: la potencia del teatro independiente',
     deck: 'Salas recuperadas en Boedo, Abasto y Villa Crespo donde la dramaturgia argentina dialoga cara a cara con el público.',
     category: 'teatro',
-    image: '/src/assets/images/teatro_corrientes_escena_1795401974069.jpg',
+    image: 'src/assets/images/teatro_corrientes_escena_1795401974069.jpg',
     imageAlt: 'Escenario íntimo de teatro independiente con una silla de madera bajo un cenital cálido y telón oscuro',
     caption: 'Fig. 4 — Escenario de cámara del circuito teatral independiente en el barrio de Boedo.',
     featuredItemId: 'tea-coleman',
@@ -86,7 +86,7 @@ export const CULTURAL_DOSSIERS: CulturalDossier[] = [
     title: 'Formas geométricas y hormigón: museos frente al Río de la Plata',
     deck: 'Colecciones de arte concreto, vanguardias latinoamericanas y arquitectura contemporánea abierta a la ciudad.',
     category: 'espacios',
-    image: '/src/assets/images/cultura_malba_arte_1795401972827.jpg',
+    image: 'src/assets/images/cultura_malba_arte_1795401972827.jpg',
     imageAlt: 'Galería minimalista de museo argentino con paredes de hormigón visto y pinturas geométricas modernistas',
     caption: 'Fig. 5 — Sala de arte latinoamericano y geometría rioplatense bajo luz cenital.',
     featuredItemId: 'esp-malba',
@@ -112,7 +112,7 @@ export const INITIAL_CATALOG: CultureItem[] = [
     whereToExperience: 'Disponible en librerías independientes de Av. Corrientes, Eterna Cadencia y El Ateneo Grand Splendid.',
     pullQuote: 'El universo (que otros llaman la Biblioteca) se compone de un número indefinido, y tal vez infinito, de galerías hexagonales.',
     quoteAttribution: 'Jorge Luis Borges, La biblioteca de Babel',
-    image: '/src/assets/images/libros_ateneo_editorial_1795401974357.jpg',
+    image: 'src/assets/images/libros_ateneo_editorial_1795401974357.jpg',
     imageAlt: 'Edición clásica de Ficciones junto a obras esenciales de la literatura argentina',
   },
   {
@@ -236,7 +236,7 @@ export const INITIAL_CATALOG: CultureItem[] = [
     editorialEssay:
       'Ópera prima que abrió las puertas del mundo al Nuevo Cine Argentino. Martel privilegia el diseño sonoro —el hielo en los vasos, los truenos lejanos, las voces fuera de campo— para construir una experiencia sensorial única.',
     whereToExperience: 'Ciclos de cine de autor en MALBA Cine, Cineclub Municipal Hugo del Carril (Córdoba) y CINE.AR.',
-    image: '/src/assets/images/cine_nuevo_argentino_1795401973546.jpg',
+    image: 'src/assets/images/cine_nuevo_argentino_1795401973546.jpg',
     imageAlt: 'Escena nocturna frente a sala de cine nacional en Buenos Aires',
   },
   {
@@ -322,7 +322,7 @@ export const INITIAL_CATALOG: CultureItem[] = [
     editorialEssay:
       'Estrenada en el living de una casa de Boedo convertida en sala teatral, esta obra se convirtió en un fenómeno internacional con más de veinte años en cartel. Resume mejor que ninguna otra el vigor inventivo del teatro off porteño.',
     whereToExperience: 'Teatro Timbre 4 (México 3554, Boedo, Buenos Aires).',
-    image: '/src/assets/images/teatro_corrientes_escena_1795401974069.jpg',
+    image: 'src/assets/images/teatro_corrientes_escena_1795401974069.jpg',
     imageAlt: 'Escenario del circuito independiente porteño bajo luz cenital cálida',
   },
   {
@@ -359,7 +359,7 @@ export const INITIAL_CATALOG: CultureItem[] = [
     editorialEssay:
       'Visitar el Teatro Colón —ya sea para una función de ópera, un concierto de la Filarmónica de Buenos Aires o una visita guiada diurna— es asomarse al corazón arquitectónico y musical de Sudamérica.',
     whereToExperience: 'Entradas anticipadas y localidades accesibles de pie ("paraíso") en teatrocolon.org.ar y boletería de Tucumán 1171.',
-    image: '/src/assets/images/hero_teatro_colon_1795401973328.jpg',
+    image: 'src/assets/images/hero_teatro_colon_1795401973328.jpg',
     imageAlt: 'Interior dorado y palcos de terciopelo del Teatro Colón de Buenos Aires',
   },
   {
@@ -481,7 +481,7 @@ export const INITIAL_CATALOG: CultureItem[] = [
     editorialEssay:
       'Además de su colección permanente y exhibiciones temporales de jerarquía internacional, el MALBA aloja una de las mejores salas de cine arte de la ciudad y una librería curada de diseño y teoría estética.',
     whereToExperience: 'Abierto de miércoles a lunes en Palermo; arancel reducido los miércoles.',
-    image: '/src/assets/images/cultura_malba_arte_1795401972827.jpg',
+    image: 'src/assets/images/cultura_malba_arte_1795401972827.jpg',
     imageAlt: 'Interior arquitectónico de galería con luz natural y obras geométricas modernistas',
   },
   {

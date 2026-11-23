@@ -1,0 +1,8 @@
+{
+  "name": "Meridiano Sur — Cultura Argentina",
+  "description": "Guía curatorial de recomendaciones de libros, cine, obras de teatro, música y espacios culturales de Argentina.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

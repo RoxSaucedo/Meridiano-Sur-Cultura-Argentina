@@ -1,0 +1,220 @@
+{
+  "entities": {
+    "UserPublicProfile": {
+      "title": "UserPublicProfile",
+      "description": "Public cultural reader profile without PII",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "displayName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "province": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        },
+        "favoriteDiscipline": {
+          "type": "string",
+          "enum": ["libros", "cine", "teatro", "musica", "espacios"]
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["uid", "displayName", "province", "favoriteDiscipline", "createdAt", "updatedAt"]
+    },
+    "UserPrivateInfo": {
+      "title": "UserPrivateInfo",
+      "description": "Private user account metadata containing PII isolated from public reads",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "email": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["uid", "email", "createdAt"]
+    },
+    "SavedCultureItem": {
+      "title": "SavedCultureItem",
+      "description": "User bookmarked cultural recommendation and personal reading or visit note",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "itemId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "note": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 500
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["userId", "itemId", "note", "createdAt", "updatedAt"]
+    },
+    "CommunityRecommendation": {
+      "title": "CommunityRecommendation",
+      "description": "User-submitted Argentine cultural recommendation visible in the public catalog",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "accessionCode": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 24
+        },
+        "title": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 120
+        },
+        "creator": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 100
+        },
+        "year": {
+          "type": "integer"
+        },
+        "category": {
+          "type": "string",
+          "enum": ["libros", "cine", "teatro", "musica", "espacios"]
+        },
+        "era": {
+          "type": "string",
+          "enum": ["clasicos", "contemporaneo", "imperdibles"]
+        },
+        "genre": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "province": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 400
+        },
+        "editorialEssay": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 1500
+        },
+        "whereToExperience": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 250
+        },
+        "authorUid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "authorName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "isPublic": {
+          "type": "boolean"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "accessionCode",
+        "title",
+        "creator",
+        "year",
+        "category",
+        "era",
+        "genre",
+        "location",
+        "province",
+        "summary",
+        "editorialEssay",
+        "whereToExperience",
+        "authorUid",
+        "authorName",
+        "isPublic",
+        "createdAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/public/{docId}": {
+      "schema": { "$ref": "#/entities/UserPublicProfile" },
+      "description": "Public profile document (docId: profile) for a registered member"
+    },
+    "/users/{userId}/private/{docId}": {
+      "schema": { "$ref": "#/entities/UserPrivateInfo" },
+      "description": "Private PII document (docId: info) isolated to account owner"
+    },
+    "/users/{userId}/savedItems/{itemId}": {
+      "schema": { "$ref": "#/entities/SavedCultureItem" },
+      "description": "Personal bookmarked cultural items and notes owned by the user"
+    },
+    "/recommendations/{recId}": {
+      "schema": { "$ref": "#/entities/CommunityRecommendation" },
+      "description": "Community-contributed Argentine cultural recommendations"
+    }
+  }
+}

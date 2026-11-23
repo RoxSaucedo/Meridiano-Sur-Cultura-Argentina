@@ -1,7 +1,7 @@
 import { CultureCategory, CulturalDossier, CultureItem, FederalRoute } from '../types/culture';
 
 export const HERO_IMAGE = {
-  src: '/src/assets/images/hero_teatro_colon_1795401973328.jpg',
+  src: 'src/assets/images/hero_teatro_colon_1795401973328.jpg',
   alt: 'Sala principal del Teatro Colón de Buenos Aires iluminada por su araña central y palcos de terciopelo carmesí',
   caption: 'Fig. 1 — Sala principal del Teatro Colón en Buenos Aires, emblema lírico y escénico desde 1908.',
 };
